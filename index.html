@@ -4,26 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Engaged Learning Resources | UMSI</title>
-
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header>
-  <a href = "#main">Skip to Main Content</a>
-        <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="University of Michigan School of Information">
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="index.html" aria-current="page">Home</a></li>
-                <li><a href="prep.html">Preparing for Your Experience</a></li>
-                <li><a href="starting.html">Starting Your Experience</a></li>
-                <li><a href="during.html">During Your Experience</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <a class="skip-link" href="#main">Skip to Main Content</a>
 
+        <div class="site-brand">
+        <img
+            src="images/umsi-logo.jpg"
+            alt="University of Michigan School of Information"
+        >
+
+        <div class="site-brand-text">
+            <p class="site-name">Engaged Learning Office</p>
+            <p class="site-description">School of Information</p>
+        </div>
+        </div>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="prep.html">Preparing for Your Experience</a></li>
+            <li><a href="starting.html">Starting Your Experience</a></li>
+            <li><a href="during.html">During Your Experience</a></li>
+        </ul>
+    </nav>
     </header>
-    <main id="main">
-       <h1>Welcome to the UMSI Engaged Learning Office</h1>
-    <section>
+
+    <main id="main" tabindex="-1">
+    <h1>Engaged Learning Resources</h1>
+    <section class="home-intro">
       <h2>Build Skills. Work with Partners. Have an Impact.</h2>
       <p>
        The UMSI Engaged Learning Office connects students with opportunities to apply classroom knowledge to real challenges. Use this site to prepare for your experience, manage your work, and reflect on what you learned.
@@ -33,12 +46,15 @@
          <!-- Note: this iframe might cause an Axe ARIA error - that's not on you that's on YouTube! -->
     </section>
 
-<section>
+    <section>
     <h2>Why Use This Resource?</h2>
 
     <p>Real-world projects rarely follow a perfect plan. This site helps you find the right guidance when you need it, so you can spend less time searching for materials and more time learning, collaborating, and moving your project forward.
     </p>
-        <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="A student wears a UMSI backpack in fall on the drag.">
+        <img
+    src="images/campus-backpack.jpg"
+    alt="A student wearing a UMSI backpack walks along a campus path in autumn."
+    >
     <ul>
         <li><strong>Follow a clear process:</strong> Move from preparation and project launch through active work, reflection, and responsible closeout.</li>
         <li><strong>Find practical support:</strong> Access relevant templates, checklists, examples, and how-to guidance for common project needs.</li>
@@ -54,32 +70,58 @@
         project to find practical steps and useful resources.
     </p>
 
-    <article>
-        <h3>Preparing for Your Experience</h3>
-        <p>
+    <article class="stage-card">
+        <span class="stage-number" aria-hidden="true">01</span>
+
+        <div class="stage-content">
+            <h3>Preparing for Your Experience</h3>
+
+            <p>
             Set learning goals, explore the community context,
             and review your team's readiness before reaching
             out to your partner.
-        </p>
-        <a href="prep.html">Explore preparation steps and resources</a>
+            </p>
+
+            <a href="prep.html">
+            Explore preparation steps and resources
+            </a>
+        </div>
     </article>
 
-    <article>
-        <h3>Starting Your Experience</h3>
-        <p>
+    <article class="stage-card">
+        <span class="stage-number" aria-hidden="true">02</span>
+
+        <div class="stage-content">
+            <h3>Starting Your Experience</h3>
+
+            <p>
             Introduce your team, prepare for your first meeting,
             and agree on roles, scope, and communication.
-        </p>
-        <a href="starting.html">Explore project launch guidance</a>
+            </p>
+
+            <a href="starting.html">
+            Explore project launch guidance
+            </a>
+        </div>
+
     </article>
 
-    <article>
-        <h3>During Your Experience</h3>
-        <p>
-            Track progress, communicate with your partner,
-            respond to feedback, and work through challenges.
-        </p>
-        <a href="during.html">Explore active project support</a>
+    
+        <article class="stage-card">
+        <span class="stage-number" aria-hidden="true">03</span>
+
+        <div class="stage-content">
+            <h3>During Your Experience</h3>
+
+            <p>
+                Track progress, communicate with your partner,
+                respond to feedback, and work through challenges.
+            </p>
+
+            <a href="during.html">
+                Explore active project support
+            </a>
+        </div>
     </article>
 
     <!--
@@ -88,9 +130,10 @@
     -->
 </section>
 
-   <section>
+   <section class="featured-programs">
     <h2>Featured Programs</h2>
     <p>Explore opportunities to collaborate with organizations, communities, student teams, and partners in Michigan and beyond.</p>
+    <div class="program-grid">
     <article>
     <h3><a href="https://mcompass.umich.edu/_portal/tds-program-brochure?programid=12810">AI Clinic Project Experience</a></h3>
     <p>Work with a team on an applied artificial intelligence project for a partner organization.</p>
@@ -120,6 +163,7 @@
       <h3><a href="https://www.si.umich.edu/student-life/study-abroad">Study Abroad</a></h3>
       <p>Build intercultural awareness and apply your learning in an international setting. </p>
     </article>
+    </div>
    </section>
   <section>
     <h2>About the Engaged Learning Office</h2>
@@ -144,6 +188,41 @@
       <address>
         <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>
       </address>
+        <!-- Social links for the School of Information. -->
+        <div class="footer-social">
+            <p>Follow UMSI</p>
+
+            <a
+                href="https://www.linkedin.com/school/university-of-michigan---school-of-information/"
+                aria-label="UMSI on LinkedIn"
+                >
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                <path d="M7 10v7 M7 7v.1 M11 17v-7 M11 13a3 3 0 0 1 6 0v4"></path>
+            </svg>
+            </a>
+        <!-- Instagram -->
+            <a
+                href="https://www.instagram.com/umschoolofinformation/"
+                aria-label="UMSI on Instagram"
+                >
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="0.5"></circle>
+            </svg>
+            </a>
+        <!-- YouTube -->
+            <a
+                href="https://www.youtube.com/user/schoolofinformation"
+                aria-label="UMSI on YouTube"
+            >
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="2" y="5" width="20" height="14" rx="4"></rect>
+                <path d="M10 9l6 3-6 3z"></path>
+            </svg>
+            </a>
+        </div>
       <p>&copy; 2026 Regents of the University of Michigan</p>
     </footer>
 </body>

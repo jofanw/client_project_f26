@@ -4,15 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starting Your Experience | UMSI</title>
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <a href="#main">Skip to Main Content</a>
+    <header class="site-header">
+        <a class="skip-link" href="#main">Skip to Main Content</a>
 
-        <img
-            src="images/UMSI_signature_vertical_informal_solidblue.jpg"
+        <div class="site-brand">
+            <img
+            src="images/umsi-logo.jpg"
             alt="University of Michigan School of Information"
-        >
+            >
+
+            <div class="site-brand-text">
+                <p class="site-name">Engaged Learning Office</p>
+                <p class="site-description">School of Information</p>
+            </div>
+        </div>
 
         <nav aria-label="Main navigation">
             <ul>
@@ -28,7 +37,7 @@
         </nav>
     </header>
 
-    <main id="main">
+    <main id="main" tabindex="-1">
         <h1>Starting Your Experience</h1>
 
         <section>
@@ -39,44 +48,70 @@
         Use the steps below to prepare for your first meeting and
         turn initial ideas into shared expectations.
     </p>
+    <img
+        src="images/project-start.jpg"
+        alt="Participants gathered around a table reviewing colorful sticky notes."
+    >
 </section>
 
 <section>
     <h2>Steps to Launch Your Project</h2>
-    <ol>
-        <li>
-            <h3>Introduce Your Team</h3>
-            <p>
-                Send your partner a short introduction explaining who
-                is on your team and why you are reaching out. Share
-                your availability and ask to schedule a kickoff meeting.
-            </p>
+    <!-- Preserve list semantics in Safari when CSS removes list markers. -->
+    <ol class="project-steps" role="list">
+        <li class="stage-card">
+            <span class="stage-number" aria-hidden="true">01</span>
+
+            <div class="stage-content">
+                <h3>Introduce Your Team</h3>
+
+                <p>
+                    Send your partner a short introduction explaining who
+                    is on your team and why you are reaching out. Share
+                    your availability and ask to schedule a kickoff meeting.
+                </p>
+            </div>
         </li>
-        <li>
-            <h3>Prepare for Your First Meeting</h3>
-            <p>
+
+
+        <li class="stage-card">
+            <span class="stage-number" aria-hidden="true">02</span>
+
+            <div class="stage-content">
+                <h3>Prepare for Your First Meeting</h3>
+                <p>
                 Create and share an agenda before the meeting. Prepare
                 questions about your partner's goals, intended users,
                 timeline, and expectations. Make time to listen to
                 their priorities.
-            </p>
+                </p>
+            </div>
         </li>
-        <li>
-            <h3>Agree on Roles and Scope</h3>
-            <p>
+
+        <li class="stage-card">
+            <span class="stage-number" aria-hidden="true">03</span>
+
+            <div class="stage-content">
+                <h3>Agree on Roles and Scope</h3>
+                <p>
                 Discuss responsibilities, possible deliverables, and
                 what your team can realistically complete. Record
                 decisions and identify questions that still need answers.
-            </p>
+                </p>
+            </div>
         </li>
-        <li>
-            <h3>Establish Communication Practices</h3>
-            <p>
+
+        <li class="stage-card">
+            <span class="stage-number" aria-hidden="true">04</span>
+
+            <div class="stage-content">
+                <h3>Establish Communication Practices</h3>
+                <p>
                 Agree on a primary contact, communication channels,
                 and meeting frequency. Send a follow-up summary
                 confirming decisions, next steps, and who is
                 responsible for each action.
-            </p>
+                </p>
+            </div>
         </li>
     </ol>
 </section>
@@ -148,21 +183,49 @@ Resource URLs are from the course-provided ELO Content document.
 Resource descriptions and review questions drafted with OpenAI Codex
 on September 19, 2026, based on the ELO content and client objectives.
 -->
-    </main>
+</main>
 
     <footer>
-        <p>
-            University of Michigan School of Information |
-            <a href="https://www.si.umich.edu/programs/engaged-learning/about-engaged-learning-office">
-                Engaged Learning Office
+        <p>University of Michigan School of Information | <a href="https://www.si.umich.edu/programs/engaged-learning/about-engaged-learning-office">Engaged Learning Office </a></p>
+      <address>
+        <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>
+      </address>
+        <!-- Social links for the School of Information. -->
+        <div class="footer-social">
+            <p>Follow UMSI</p>
+
+            <a
+                href="https://www.linkedin.com/school/university-of-michigan---school-of-information/"
+                aria-label="UMSI on LinkedIn"
+                >
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                <path d="M7 10v7 M7 7v.1 M11 17v-7 M11 13a3 3 0 0 1 6 0v4"></path>
+            </svg>
             </a>
-        </p>
-        <address>
-            <a href="mailto:umsi.engagement@umich.edu">
-                umsi.engagement@umich.edu
+        <!-- Instagram -->
+            <a
+                href="https://www.instagram.com/umschoolofinformation/"
+                aria-label="UMSI on Instagram"
+                >
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="0.5"></circle>
+            </svg>
             </a>
-        </address>
-        <p>&copy; 2026 Regents of the University of Michigan</p>
+        <!-- YouTube -->
+            <a
+                href="https://www.youtube.com/user/schoolofinformation"
+                aria-label="UMSI on YouTube"
+            >
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="2" y="5" width="20" height="14" rx="4"></rect>
+                <path d="M10 9l6 3-6 3z"></path>
+            </svg>
+            </a>
+        </div>
+      <p>&copy; 2026 Regents of the University of Michigan</p>
     </footer>
 </body>
 </html>

@@ -1,0 +1,485 @@
+/*
+ * Local fonts downloaded from Google Fonts.
+ * License files are retained in the fonts folders.
+ */
+
+/* Nunito Sans */
+@font-face {
+    font-family: "Nunito Sans";
+    src: url("../fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf")
+        format("truetype");
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Montserrat */
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+        format("truetype");
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Merriweather */
+@font-face {
+    font-family: "Merriweather";
+    src: url("../fonts/Merriweather/Merriweather-VariableFont_opsz,wdth,wght.ttf")
+        format("truetype");
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*
+ * Base styles developed with assistance from OpenAI Codex.
+ * Establish readable text and flexible images for mobile screens.
+ */
+
+/* Include padding and borders in an element's declared width. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Set the default reading style for the website. */
+body {
+    font-family: "Nunito Sans", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #222222;
+    background-color: #ffffff;
+}
+
+
+/* Let images shrink to fit their containers without distortion. */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;    
+}
+
+
+/* Keep the main content away from the edges of the screen. */
+main{
+    padding: 1.25rem;
+}
+
+/* Create space between paragraphs. */
+p {
+    margin-block: 0 1rem;
+}
+
+/* Keep embedded videos within the content width. */
+iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border: 0;
+}
+/*
+ * Brand color reference:
+ * https://brand.umich.edu/design-resources/colors/
+ */
+
+/* Shared heading styles */
+h1,
+h2,
+h3 {
+    color: #00274c;
+    line-height: 1.25;
+    font-weight: 700;
+    margin-block: 0 1rem;
+}
+
+/* Page title */
+h1{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Section titles */
+h2{
+    font-size: 1.5rem;
+}
+
+/* Titles within a section */
+h3{
+    font-size: 1.125rem;
+}
+
+/* Space between the main content sections */
+main > section,
+main > aside {
+    margin-block: 2.5rem;
+}
+
+/* Keep the skip link off-screen until it receives focus. */
+.skip-link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+}
+
+/* Show the skip link when reached with the keyboard. */
+.skip-link:focus {
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    z-index: 1000;
+    padding: 0.75rem 1rem;
+    background-color: #00274c;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Give links and buttons gently rounded corners across all pages. */
+a,
+button {
+    border-radius: 0.375rem;
+}
+
+/* Make keyboard focus visible on links and buttons. */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #00274c;
+    outline-offset: 3px;
+}
+
+/* Shared site header */
+.site-header {
+    padding: 0rem;
+    background-color: #ffffff;
+}
+
+/* Resize the header logo while preserving its proportions. */
+.site-header > img {
+    width: 5rem;
+    height: auto;
+    margin-bottom: 1.25rem;
+}
+
+/* Keep navigation links away from the page edges while allowing 
+the brand background to span the full width. */
+.site-header nav {
+    padding: 1.25rem;
+}
+
+/* Arrange navigation links in two equal columns. */
+.site-header nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    list-style: none;
+}
+
+/* Give each link a generous clickable area. */
+.site-header nav a {
+    display: block;
+    height: 100%;
+    padding: 0.625rem;
+    border: 1px solid #00274c;
+    border-radius: 0.5rem;
+    color: #00274c;
+    background-color: #ffffff;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    text-decoration: none;
+}
+
+/* Identify the current page with more than color alone. */
+.site-header nav a[aria-current="page"] {
+    background-color: #00274c;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+/* Project stage cards: number column + content column */
+.stage-card {
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #d8dee5;
+    border-radius: 0.75rem;
+    background-color: #ffffff;
+}
+
+.stage-number {
+    color: #00274c;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.stage-content > h3 {
+    margin-bottom: 0.75rem;
+}
+
+.stage-content > a {
+    display: inline-block;
+    padding-block: 0.5rem;
+    color: #00274c;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+/* Keep lists in the main content readable. */
+main ul,
+main ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+main li {
+    margin-bottom: 0.5rem;
+}
+
+/* Add breathing room around photos in the main content. */
+main img {
+    margin-block: 1.5rem;
+}
+
+/* Shared footer */
+footer {
+    padding: 2rem 1.25rem;
+    background-color: #00274c;
+    color: #ffffff;
+}
+
+footer a {
+    color: #ffcb05;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    overflow-wrap: anywhere;
+}
+
+footer address {
+    font-style: normal;
+    margin-bottom: 1rem;
+}
+
+/* Keep keyboard focus visible against the dark background. */
+footer a:focus-visible {
+    outline-color: #ffcb05;
+}
+
+/* Use custom step numbers instead of default list markers. */
+main .project-steps {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Give content links a consistent, recognizable appearance. */
+main a {
+    color: #00274c;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    overflow-wrap: anywhere;
+}
+
+/* Emphasize links when the pointer is over them. */
+main a:hover {
+    color: #005a9c;
+}
+
+/* Featured programs section */
+.featured-programs {
+    padding: 1rem;
+    background-color: #f4f6f8;
+    border-radius: 0.75rem;
+}
+
+/* Responsive program grid */
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: 1rem;
+}
+
+/* Program cards */
+.program-grid > article {
+    padding: 1.25rem;
+    background-color: #ffffff;
+    border: 1px solid #d8dee5;
+    border-radius: 0.5rem;
+}
+
+.program-grid > article > h3 {
+    margin-bottom: 0.75rem;
+}
+
+.program-grid > article > p {
+    margin-bottom: 0;
+}
+
+/* Give each program title a rectangular clickable area. */
+.program-grid > article > h3 > a {
+    display: block;
+}
+
+/* Highlight questions that invite reflection. */
+.reflection-panel {
+    margin-block: 2rem;
+    padding: 1.25rem;
+    background-color: #f4f6f8;
+    border-left: 4px solid #00274c;
+    border-radius: 0.5rem;
+}
+
+.reflection-panel > ul {
+    margin-bottom: 0;
+}
+
+/* Place the logo beside the site name. */
+.site-brand {
+    display: grid;
+    grid-template-columns: 3.5rem minmax(0, 1fr);
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 0;
+    background-color: #f4f6f8;
+    padding: 0.75rem;
+    border-radius: 0rem;
+}
+
+.site-brand > img {
+    width: 3.5rem;
+    height: auto;
+}
+
+.site-name {
+    margin: 0;
+    color: #00274c;
+    font-size: clamp(1rem, 5.85vw, 1.25rem);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.site-description {
+    margin: 0.25rem 0 0;
+    color: #222222;
+    font-size: 0.9rem;
+}
+
+/* Refine homepage introduction spacing and heading hierarchy. */
+main > .home-intro {
+    margin-top: 1.5rem;
+}
+
+.home-intro > h2 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+/* Extend each program link across its card. */
+.program-grid > article {
+    position: relative;
+}
+
+.program-grid > article > h3 > a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+/* Highlight the whole card when its link receives keyboard focus. */
+.program-grid > article:focus-within {
+    outline: 3px solid #00274c;
+    outline-offset: 3px;
+}
+
+.program-grid > article > h3 > a:focus-visible {
+    outline: none;
+}
+
+/* Remove the browser's tap tint and change only the title color. */
+.program-grid > article > h3 > a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.program-grid > article:hover > h3 > a,
+.program-grid > article > h3 > a:active {
+    color: #005a9c;
+}
+
+/* Give social icons a generous clickable area in the footer. */
+/* Align the social label and icons, allowing wrapping when needed. */
+.footer-social {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-block: 1.5rem;
+}
+
+.footer-social > p {
+    margin: 0;
+    font-weight: 700;
+}
+
+.footer-social > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    color: #ffffff;
+}
+
+.footer-social svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.footer-social > a:hover {
+    color: #ffcb05;
+}
+
+/* Use a subtle, rounded focus outline for social links. */
+.footer-social > a:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+/*
+ * Give wrapped text links a separate rounded focus ring on each line.
+ * Reference: https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break
+ */
+main p a,
+main li a,
+footer p a {
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+main p a:focus-visible,
+main li a:focus-visible,
+footer p a:focus-visible {
+    outline: 2px solid transparent;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 2px currentColor;
+}
+
+/* Keep standalone newsletter and footer email links in one rounded box. */
+main aside > div > a,
+footer address > a {
+    display: inline-block;
+    max-width: 100%;
+}
